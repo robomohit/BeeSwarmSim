@@ -1,0 +1,16 @@
+opencv-python==4.8.1.78
+pillow==10.0.1
+pyautogui==0.9.54
+numpy==1.24.3
+keyboard==0.13.5
+psutil==5.9.5
+requests==2.31.0
+threading
+tkinter
+json
+time
+random
+logging
+os
+sys
+configparser
