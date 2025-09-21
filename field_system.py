@@ -18,109 +18,126 @@ class FieldNavigator:
         self.current_field = None
         
     def _load_field_coordinates(self):
-        """Load field coordinates and navigation paths"""
+        """Load field coordinates and navigation paths from hive"""
         return {
             'Sunflower Field': {
-                'hive_path': ['w', 'w', 'w'],
+                'hive_path': [('w', 2.0)],  # (key, duration) - Walk straight forward for 2 seconds
                 'coordinates': (640, 400),
                 'level': 'starter',
-                'recommended_bees': 5
+                'recommended_bees': 5,
+                'description': 'Straight forward from hive'
             },
             'Dandelion Field': {
-                'hive_path': ['a', 'w', 'w'],
+                'hive_path': [('a', 0.8), ('w', 1.5)],  # Turn left, then forward
                 'coordinates': (580, 350),
                 'level': 'starter',
-                'recommended_bees': 5
+                'recommended_bees': 5,
+                'description': 'Left from hive, then forward'
             },
             'Mushroom Field': {
-                'hive_path': ['s', 'a', 'a'],
+                'hive_path': [('s', 0.5), ('a', 0.8), ('w', 1.2)],  # Back, left, forward
                 'coordinates': (520, 450),
                 'level': 'starter',
-                'recommended_bees': 5
+                'recommended_bees': 5,
+                'description': 'Behind hive to the left'
             },
             'Blue Flower Field': {
-                'hive_path': ['d', 'w', 'w'],
+                'hive_path': [('d', 0.8), ('w', 2.0)],  # Right, then forward
                 'coordinates': (700, 350),
                 'level': 'starter',
-                'recommended_bees': 10
+                'recommended_bees': 10,
+                'description': 'Right from hive, then forward'
             },
             'Clover Field': {
-                'hive_path': ['d', 'd', 'w'],
+                'hive_path': [('d', 1.2), ('w', 1.5)],  # Further right, then forward
                 'coordinates': (760, 400),
                 'level': 'starter',
-                'recommended_bees': 10
+                'recommended_bees': 10,
+                'description': 'Far right from hive'
             },
             'Strawberry Field': {
-                'hive_path': ['a', 'a', 'w', 'w'],
+                'hive_path': [('a', 1.5), ('w', 2.5)],  # Left, then long forward walk
                 'coordinates': (480, 300),
                 'level': 'intermediate',
-                'recommended_bees': 15
+                'recommended_bees': 15,
+                'description': 'Left from hive, up the ramp'
             },
             'Bamboo Field': {
-                'hive_path': ['w', 'w', 'w', 'w'],
+                'hive_path': [('w', 4.0)],  # Long walk straight forward
                 'coordinates': (640, 250),
                 'level': 'intermediate',
-                'recommended_bees': 15
+                'recommended_bees': 15,
+                'description': 'Straight forward from hive, up ramps'
             },
             'Spider Field': {
-                'hive_path': ['s', 's', 'a', 'a'],
+                'hive_path': [('s', 1.0), ('a', 1.5), ('w', 1.0)],  # Back, left, forward
                 'coordinates': (480, 550),
                 'level': 'intermediate',
-                'recommended_bees': 15
+                'recommended_bees': 15,
+                'description': 'Behind and left of hive'
             },
             'Rose Field': {
-                'hive_path': ['d', 'd', 'd', 'w'],
+                'hive_path': [('d', 2.0), ('w', 2.5)],  # Far right, then forward
                 'coordinates': (820, 350),
                 'level': 'advanced',
-                'recommended_bees': 20
+                'recommended_bees': 20,
+                'description': 'Far right from hive, up ramps'
             },
             'Pine Tree Forest': {
-                'hive_path': ['w', 'w', 'w', 'w', 'w'],
+                'hive_path': [('w', 6.0)],  # Very long walk forward
                 'coordinates': (640, 150),
                 'level': 'advanced',
-                'recommended_bees': 25
+                'recommended_bees': 25,
+                'description': 'Straight forward, up multiple ramps'
             },
             'Cactus Field': {
-                'hive_path': ['s', 's', 's'],
+                'hive_path': [('s', 2.5)],  # Walk backwards/south
                 'coordinates': (640, 600),
                 'level': 'advanced',
-                'recommended_bees': 25
+                'recommended_bees': 25,
+                'description': 'Behind hive, down ramps'
             },
             'Pumpkin Patch': {
-                'hive_path': ['s', 's', 'd', 'd'],
+                'hive_path': [('s', 1.5), ('d', 1.5), ('w', 1.0)],  # Back, right, forward
                 'coordinates': (780, 580),
                 'level': 'advanced',
-                'recommended_bees': 30
+                'recommended_bees': 30,
+                'description': 'Behind and right of hive'
             },
             'Pineapple Patch': {
-                'hive_path': ['a', 'a', 'a', 'w'],
+                'hive_path': [('a', 2.5), ('w', 2.0)],  # Far left, then forward
                 'coordinates': (420, 350),
                 'level': 'expert',
-                'recommended_bees': 35
+                'recommended_bees': 35,
+                'description': 'Far left from hive, up ramps'
             },
             'Stump Field': {
-                'hive_path': ['a', 'a', 'a', 'a'],
+                'hive_path': [('a', 3.0), ('w', 1.5)],  # Very far left, then forward
                 'coordinates': (380, 400),
                 'level': 'expert',
-                'recommended_bees': 35
+                'recommended_bees': 35,
+                'description': 'Far left of hive, hidden area'
             },
             'Coconut Field': {
-                'hive_path': ['d', 'd', 'd', 'd'],
+                'hive_path': [('d', 3.0), ('w', 2.0)],  # Very far right, then forward
                 'coordinates': (860, 400),
                 'level': 'expert',
-                'recommended_bees': 40
+                'recommended_bees': 40,
+                'description': 'Far right of hive, up multiple ramps'
             },
             'Pepper Patch': {
-                'hive_path': ['s', 's', 's', 'd'],
+                'hive_path': [('s', 2.0), ('d', 1.5), ('w', 1.5)],  # Back, right, forward
                 'coordinates': (720, 620),
                 'level': 'expert',
-                'recommended_bees': 40
+                'recommended_bees': 40,
+                'description': 'Behind hive, right side, down ramps'
             },
             'Mountain Top Field': {
-                'hive_path': ['w', 'w', 'w', 'w', 'w', 'w'],
+                'hive_path': [('w', 8.0)],  # Extremely long walk forward
                 'coordinates': (640, 100),
                 'level': 'master',
-                'recommended_bees': 50
+                'recommended_bees': 50,
+                'description': 'Straight forward, up all ramps to the top'
             }
         }
     
@@ -136,12 +153,27 @@ class FieldNavigator:
         
         field_data = self.field_coordinates[field_name]
         
-        logging.info(f"Navigating to {field_name}")
+        logging.info(f"Navigating to {field_name}: {field_data['description']}")
         
-        # Execute movement sequence
-        for direction in field_data['hive_path']:
-            self.input_auto.safe_key_press(direction, hold_time=1.0)
-            time.sleep(0.5)
+        # Execute movement sequence with proper timing
+        for movement in field_data['hive_path']:
+            if isinstance(movement, tuple):
+                # New format: (key, duration)
+                direction, duration = movement
+                logging.info(f"Moving {direction} for {duration} seconds")
+                
+                # For longer movements (ramps), add jumping to help navigation
+                if duration >= 2.0:
+                    self._move_with_jumping(direction, duration)
+                else:
+                    self.input_auto.safe_key_press(direction, hold_time=duration)
+                
+                time.sleep(0.3)  # Brief pause between movements
+            else:
+                # Legacy format: just key (1 second default)
+                logging.info(f"Moving {movement} for 1.0 seconds")
+                self.input_auto.safe_key_press(movement, hold_time=1.0)
+                time.sleep(0.3)
         
         # Verify we reached the field
         time.sleep(2)
@@ -154,22 +186,27 @@ class FieldNavigator:
             return self._try_alternative_navigation(field_name)
     
     def return_to_hive(self):
-        """Return to hive from any location"""
+        """Return to hive from any location using BSS mechanics"""
         logging.info("Returning to hive")
         
-        # Method 1: Use E key (hive tool)
+        # Method 1: Use E key (Hive Tool) - Primary method in BSS
+        logging.info("Using E key (Hive Tool) to return to hive")
         if self.input_auto.safe_key_press('e'):
-            time.sleep(3)
+            time.sleep(4)  # Wait for teleport animation
             if self._verify_at_hive():
+                logging.info("Successfully returned to hive using E key")
                 return True
         
-        # Method 2: Use reset character position
-        if self._reset_character_position():
-            time.sleep(5)
+        # Method 2: Use Roblox character reset (ESC menu method)
+        logging.info("E key failed, trying character reset")
+        if self._reset_character_roblox():
+            time.sleep(6)  # Wait for respawn
             if self._verify_at_hive():
+                logging.info("Successfully returned to hive using character reset")
                 return True
         
-        # Method 3: Manual navigation using compass
+        # Method 3: Manual walk back (last resort)
+        logging.info("Reset failed, attempting manual navigation")
         return self._navigate_to_hive_manually()
     
     def _verify_field_arrival(self, field_name):
@@ -201,30 +238,48 @@ class FieldNavigator:
         
         return False
     
-    def _reset_character_position(self):
-        """Reset character position using Roblox reset"""
+    def _reset_character_roblox(self):
+        """Reset character using Roblox ESC menu (returns to spawn/hive)"""
         try:
+            logging.info("Opening Roblox menu to reset character")
+            
             # Open Roblox menu (ESC)
             self.input_auto.safe_key_press('esc')
-            time.sleep(1)
+            time.sleep(1.5)
             
-            # Look for reset button
-            reset_button = self.image_rec.find_template('reset_button')
+            # Look for reset character button in menu
+            reset_button = self.image_rec.find_template('reset_character_button')
             if reset_button:
+                logging.info("Found reset character button, clicking...")
                 self.input_auto.safe_click(reset_button[0], reset_button[1])
                 time.sleep(1)
                 
-                # Confirm reset
-                confirm_button = self.image_rec.find_template('confirm_reset')
-                if confirm_button:
-                    self.input_auto.safe_click(confirm_button[0], confirm_button[1])
+                # Look for confirmation dialog
+                confirm_reset = self.image_rec.find_template('confirm_reset_button')
+                if confirm_reset:
+                    logging.info("Confirming character reset...")
+                    self.input_auto.safe_click(confirm_reset[0], confirm_reset[1])
                     return True
+                else:
+                    # Try alternative confirmation (some Roblox versions)
+                    self.input_auto.safe_key_press('enter')  # Confirm with Enter
+                    return True
+            else:
+                # Alternative method: Try R key (some Roblox versions)
+                logging.info("Reset button not found, trying R key shortcut")
+                self.input_auto.safe_key_press('esc')  # Close menu first
+                time.sleep(0.5)
+                self.input_auto.safe_key_press('r')  # R key for reset in some versions
+                time.sleep(1)
+                
+                # Confirm if dialog appears
+                self.input_auto.safe_key_press('enter')
+                return True
             
-            # Close menu if reset failed
-            self.input_auto.safe_key_press('esc')
-            return False
         except Exception as e:
-            logging.error(f"Failed to reset character position: {e}")
+            logging.error(f"Failed to reset character: {e}")
+            # Try to close any open menus
+            self.input_auto.safe_key_press('esc')
             return False
     
     def _navigate_to_hive_manually(self):
@@ -243,6 +298,28 @@ class FieldNavigator:
                     return True
         
         return False
+    
+    def _move_with_jumping(self, direction, duration):
+        """Move in direction with periodic jumping to help with ramps/obstacles"""
+        logging.info(f"Moving {direction} with jumping for {duration} seconds")
+        
+        # Break movement into segments with jumping
+        segments = int(duration / 0.8)  # Jump every 0.8 seconds approximately
+        segment_duration = duration / max(segments, 1)
+        
+        for i in range(segments):
+            # Move for a segment
+            self.input_auto.safe_key_press(direction, hold_time=segment_duration * 0.7)
+            
+            # Jump to help with ramps/obstacles
+            if i < segments - 1:  # Don't jump on the last segment
+                self.input_auto.safe_key_press('space')
+                time.sleep(0.1)
+        
+        # Final movement segment if needed
+        remaining_time = duration - (segments * segment_duration * 0.7)
+        if remaining_time > 0.1:
+            self.input_auto.safe_key_press(direction, hold_time=remaining_time)
     
     def _try_alternative_navigation(self, field_name):
         """Try alternative navigation method"""

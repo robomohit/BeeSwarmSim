@@ -7,7 +7,8 @@ A comprehensive, feature-rich automation macro for Bee Swarm Simulator with adva
 ## 🚀 Features
 
 ### Core Automation
-- **Advanced Field Farming**: Intelligent field rotation with optimized pollen collection patterns
+- **Advanced Field Navigation**: Precise hive-to-field navigation using BSS mechanics (E key hive tool + character reset)
+- **Smart Field Farming**: Intelligent field rotation with optimized pollen collection patterns
 - **Quest System**: Automated quest completion for all NPCs (Black Bear, Brown Bear, Polar Bear, etc.)
 - **Mob Hunting**: Smart mob detection and elimination with loot collection
 - **Planter Management**: Automated planter planting, harvesting, and optimization
@@ -86,6 +87,32 @@ A comprehensive, feature-rich automation macro for Bee Swarm Simulator with adva
 2. **Set Quest NPCs**: Enable desired quest NPCs
 3. **Adjust Safety**: Configure break intervals and randomization
 4. **Test Run**: Start with a short test session
+
+## 🗺️ Field Navigation System
+
+### How Navigation Works
+The macro uses BSS's built-in mechanics for efficient field navigation:
+
+1. **Hive Return**: Uses E key (Hive Tool) to instantly return to hive
+2. **Character Reset**: Falls back to Roblox character reset if E key fails
+3. **Precise Paths**: Pre-calculated movement sequences for each field
+4. **Smart Movement**: Automatic jumping on ramps and obstacles
+
+### Supported Fields
+All 17 BSS fields are supported with optimized paths:
+
+**Starter Fields:** Sunflower, Dandelion, Mushroom, Blue Flower, Clover
+**Intermediate:** Strawberry, Bamboo, Spider
+**Advanced:** Rose, Pine Tree, Cactus, Pumpkin
+**Expert:** Pineapple, Stump, Coconut, Pepper
+**Master:** Mountain Top
+
+### Navigation Features
+- **E Key Integration**: Uses BSS's hive tool for instant return
+- **Roblox Reset Backup**: Character reset as failsafe method
+- **Timed Movement**: Precise movement durations for each field
+- **Obstacle Handling**: Automatic jumping for ramps and barriers
+- **Path Verification**: Confirms arrival at target field
 
 ## ⚙️ Configuration
 

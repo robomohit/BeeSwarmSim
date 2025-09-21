@@ -30,7 +30,8 @@ I have successfully created a **fully functional, comprehensive Bee Swarm Simula
 ## 🚀 Key Features Implemented
 
 ### ✅ Advanced Automation
-- **Field Farming**: Intelligent rotation, optimized patterns, bag management
+- **Field Navigation**: Uses BSS E key (Hive Tool) + Roblox character reset for efficient hive-to-field travel
+- **Smart Field Farming**: Intelligent rotation, optimized patterns, precise movement with jumping for ramps
 - **Quest System**: All NPCs supported (Black Bear, Brown Bear, Polar Bear, etc.)
 - **Mob Hunting**: Smart detection, combat patterns, loot collection
 - **Planter Management**: Auto-plant/harvest with field optimization
@@ -76,6 +77,7 @@ I have successfully created a **fully functional, comprehensive Bee Swarm Simula
 - Implemented advanced image recognition system with OpenCV
 - Created safe input automation with randomization
 - Built game state management and field detection
+- **UPDATED**: Enhanced field navigation with proper BSS mechanics (E key + character reset)
 
 ### Phase 4: Automation Features ✅
 - Developed field farming system with intelligent rotation
