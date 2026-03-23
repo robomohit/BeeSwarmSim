@@ -1,121 +1,281 @@
-<!--
-  /\ \ \__ _| |_ _ __ ___     /\/\   __ _  ___ _ __ ___  
- /  \/ / _` | __| '__/ _ \   /    \ / _` |/ __| '__/ _ \ 
-/ /\  / (_| | |_| | | (_) | / /\/\ \ (_| | (__| | | (_) |
-\_\ \/ \__,_|\__|_|  \___/  \/    \/\__,_|\___|_|  \___/                                                    
+# BSS Pro Macro v1.0.0
 
-Thanks for downloading Natro Macro!
+**Advanced Bee Swarm Simulator Automation Tool**
 
-To start the macro, just open 'START.bat'!
+A comprehensive, feature-rich automation macro for Bee Swarm Simulator with advanced safety features, intelligent automation, and a modern GUI interface.
 
-If you need help or want to discuss, join our Discord server!
+## 🚀 Features
 
-Feel free to give us a Star on GitHub!
+### Core Automation
+- **Advanced Field Navigation**: Precise hive-to-field navigation using BSS mechanics (E key hive tool + character reset)
+- **Smart Field Farming**: Intelligent field rotation with optimized pollen collection patterns
+- **Quest System**: Automated quest completion for all NPCs (Black Bear, Brown Bear, Polar Bear, etc.)
+- **Mob Hunting**: Smart mob detection and elimination with loot collection
+- **Planter Management**: Automated planter planting, harvesting, and optimization
+- **Boost Management**: Intelligent boost usage based on context and efficiency
+- **Hive Management**: Auto bee feeding, egg hatching, and honey conversion
+- **Dispenser Collection**: Automated collection from all game dispensers
 
-IMPORTANT:
-Make sure you are only downloading from an official source!
-The only official sources are:
- - our GitHub page (https://github.com/NatroTeam/NatroMacro)
- - our Discord server (https://discord.gg/natromacro)
+### Safety & Anti-Detection
+- **Advanced Randomization**: Movement, timing, and click position randomization
+- **Pattern Breaking**: Intelligent pattern detection and breaking to avoid bot-like behavior
+- **Break System**: Randomized break scheduling with configurable intervals
+- **Emergency Stops**: Multiple failsafe mechanisms including mouse corner trigger
+- **System Monitoring**: Real-time system resource and process monitoring
+- **Activity Analysis**: Bot pattern detection and prevention
 
->>> IGNORE BELOW THIS LINE <<<
--->
+### User Interface
+- **Modern GUI**: Intuitive tabbed interface with real-time statistics
+- **Live Monitoring**: Real-time activity logs and performance metrics
+- **Configuration Management**: Easy settings import/export with presets
+- **Statistics Tracking**: Comprehensive session and historical statistics
+- **Hotkey Support**: Global hotkeys for macro control
 
-<!-- no offical site warning -->
-> [!CAUTION]
-> We do **not** have a website. The only offical place to download Natro Macro is this repoistry and [discord.gg/natromacro][discord-link].
+### Technical Features
+- **Image Recognition**: Advanced OpenCV-based game state detection
+- **Multi-threading**: Smooth operation with background monitoring
+- **Error Handling**: Robust error recovery and logging system
+- **Performance Optimization**: Efficient resource usage and minimal impact
+- **Modular Design**: Extensible architecture for easy customization
 
-<div align="center">
+## 📋 Requirements
 
-<!-- logo banner -->
-<picture>
-  <source width="200px" media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NatroTeam/.github/main/profile/assets/banners/natro-logo-light.svg"> <!-- light theme (black text) -->
-  <img src="https://raw.githubusercontent.com/NatroTeam/.github/main/profile/assets/banners/natro-logo-dark.svg"> <!-- dark theme (light text) -->
-</picture>
-<br>
+### System Requirements
+- **OS**: Windows 10/11 (64-bit recommended)
+- **Python**: 3.7 or higher
+- **RAM**: 4GB minimum, 8GB recommended
+- **Storage**: 500MB free space
+- **Display**: 1280x720 minimum resolution
 
-<!-- shields and contents -->
-[![][latest-release-shield]][latest-release-link]
-[![][downloads-shield]][downloads-link]
-[![][discord-shield]][discord-link]
-[![][roblox-shield]][roblox-link]
-<br>
-An open-source Bee Swarm Simulator macro written in AutoHotkey!<br>
-</div>
+### Software Requirements
+- Roblox (latest version)
+- Bee Swarm Simulator
+- Python 3.7+
+- All dependencies (auto-installed via requirements.txt)
 
+## 🛠️ Installation
 
-<a name="installation"><h2>🛠️ Installation</h2></a>
+### Option 1: Automatic Installation
+1. Download all files to a folder
+2. Run `install.bat` (Windows) or `python install.py`
+3. Follow the on-screen instructions
 
-1. Download `Natro_Macro_v#.#.#.zip` from the [latest release][latest-release-link]
-2. Open `Natro_Macro_v#.#.#` and double-click the folder inside
-3. Run `START.bat` and wait for the macro to load
+### Option 2: Manual Installation
+1. Install Python 3.7+ from [python.org](https://python.org)
+2. Download/clone this repository
+3. Open command prompt in the macro folder
+4. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+## 🚀 Quick Start
 
-<a name="community"><h2>🌎 Community</h2></a>
+### GUI Mode (Recommended)
+1. Run `python bss_pro_macro.py`
+2. Configure settings in the GUI tabs
+3. Click "Start Macro" to begin automation
+4. Monitor progress in real-time
 
-[**Join us on Discord!**][discord-link]
+### Console Mode
+1. Run `python bss_pro_macro.py --console`
+2. Macro will run with default settings
+3. Press Ctrl+C to stop
 
-This is where you can connect with the community, access guides and help channels, and download custom patterns, paths, and themes!
+### First Time Setup
+1. **Configure Fields**: Select your preferred farming fields
+2. **Set Quest NPCs**: Enable desired quest NPCs
+3. **Adjust Safety**: Configure break intervals and randomization
+4. **Test Run**: Start with a short test session
 
-Discord is our main platform for troubleshooting and update news!
+## 🗺️ Field Navigation System
 
-<a href="https://discord.gg/natromacro">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="http://invidget.switchblade.xyz/natromacro?theme=light"> <!-- light theme -->
-    <img alt="discord-invite-widget" width=500 src="http://invidget.switchblade.xyz/natromacro"> <!-- dark theme -->
-  </picture>
-</a>
+### How Navigation Works
+The macro uses BSS's built-in mechanics for efficient field navigation:
 
+1. **Hive Return**: Uses E key (Hive Tool) to instantly return to hive
+2. **Character Reset**: Falls back to Roblox character reset if E key fails
+3. **Precise Paths**: Pre-calculated movement sequences for each field
+4. **Smart Movement**: Automatic jumping on ramps and obstacles
 
-<a name="contributing"><h2>⌨️ Contributing</h2></a>
+### Supported Fields
+All 17 BSS fields are supported with optimized paths:
 
-Natro Macro is an open-source project. We greatly appreciate all contributions, whether you are helping us fix bugs or suggesting new features. If you want to get started, read our [Contributing Guidelines][contributing-link] first.
+**Starter Fields:** Sunflower, Dandelion, Mushroom, Blue Flower, Clover
+**Intermediate:** Strawberry, Bamboo, Spider
+**Advanced:** Rose, Pine Tree, Cactus, Pumpkin
+**Expert:** Pineapple, Stump, Coconut, Pepper
+**Master:** Mountain Top
 
-- **Bugs**: If you find an issue or run into an error message while using the macro, please create a [bug report][bug-report-link].
-- **Suggestions**: If you have an idea for a feature that you'd like to see in the macro, please submit a [suggestion][suggestion-link].
+### Navigation Features
+- **E Key Integration**: Uses BSS's hive tool for instant return
+- **Roblox Reset Backup**: Character reset as failsafe method
+- **Timed Movement**: Precise movement durations for each field
+- **Obstacle Handling**: Automatic jumping for ramps and barriers
+- **Path Verification**: Confirms arrival at target field
 
-For discussions, please join us on [Discord][discord-link] instead!
+## ⚙️ Configuration
 
+### Main Settings
+- **Farming**: Field selection, rotation, timing
+- **Quests**: NPC selection, auto-accept settings
+- **Mobs**: Mob types to hunt, detection timeout
+- **Planters**: Auto-plant/harvest, field selection
+- **Boosts**: Smart boost usage, thresholds
+- **Safety**: Randomization, breaks, emergency stops
 
-<a name="credits"><h2>💝 Credits</h2></a>
+### Hotkeys (Default)
+- `F1`: Start/Stop Macro
+- `F2`: Pause/Resume
+- `F3`: Emergency Stop
+- `F4`: Show/Hide GUI
 
-Natro Macro wouldn't be possible without the help and inspiration of many extraordinary individuals.<br>
-We want to show our gratitude to all of you, so please check out our [list of credits][credits-link]!
+### Safety Settings
+- **Break Intervals**: 30-60 minutes (randomized)
+- **Break Duration**: 2-5 minutes (randomized)
+- **Movement Randomization**: 30% variance
+- **Click Randomization**: 20% variance
+- **Emergency Stops**: Multiple failsafe triggers
 
-Thank you all for your hard work and support!
+## 📊 Statistics & Monitoring
 
+### Real-time Monitoring
+- Current activity and status
+- Active boosts and timers
+- Quest progress tracking
+- System resource usage
 
-<a name="stars"><h2>🌠 Stars</h2></a>
+### Session Statistics
+- Runtime and efficiency metrics
+- Pollen/honey collection rates
+- Quest completion counts
+- Mob kills and loot collected
+- Planter management stats
 
-If Natro Macro helped you, let us know by giving it a ⭐ $\color{yellow}{\textsf{Star}}$ on GitHub!<br>
-You can do this by scrolling up and clicking the Star button at the top of the page!
+### Performance Metrics
+- Actions per minute
+- Error rates and recovery
+- System impact monitoring
+- Safety trigger activations
 
-<a href="https://github.com/NatroTeam/NatroMacro/stargazers">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="http://reporoster.com/stars/NatroTeam/NatroMacro"> <!-- light theme -->
-    <img alt="stargazer-widget" src="http://reporoster.com/stars/dark/NatroTeam/NatroMacro"> <!-- dark theme -->
-  </picture>
-</a>
+## 🛡️ Safety & Legal
 
+### Safety Features
+- **Anti-Detection**: Advanced randomization and pattern breaking
+- **System Monitoring**: Resource usage and anomaly detection
+- **Emergency Stops**: Multiple failsafe mechanisms
+- **Break System**: Human-like break patterns
+- **Activity Analysis**: Bot behavior prevention
 
-<a name="license"><details><summary><h4>📝 License</h4></summary></a>
-Copyright © 2022-2024 [Natro Team][github-profile-link]<br>
-This project is licensed under [GNU GPL v3.0](./LICENSE.md)
+### Legal Notice
+- Use at your own risk and discretion
+- Follow Roblox Terms of Service
+- This tool is for educational purposes
+- No warranty or guarantee provided
+- Users are responsible for their account safety
 
-</details>
+### Best Practices
+- Start with short test sessions
+- Monitor system resources
+- Use reasonable break intervals
+- Don't run 24/7 continuously
+- Keep backup saves of progress
 
-<!-- links -->
-[latest-release-shield]: https://img.shields.io/github/v/release/NatroTeam/NatroMacro?logo=github&logoColor=white&labelColor=black&color=faa125
-[latest-release-link]: https://github.com/NatroTeam/NatroMacro/releases/latest
-[downloads-shield]: https://img.shields.io/github/downloads/NatroTeam/NatroMacro/total?label=downloads&labelColor=black&color=40ca53&logo=data:image/svg%2bxml;base64,PHN2ZwogICB2aWV3Qm94PSIwIDAgMjQgMjQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGgKICAgICBmaWxsPSIjZmZmIgogICAgIGQ9Ik0gMTIsMC4yMDk2MTUxNSBBIDExLjc5MDM4NSwxMS43OTAzODUgMCAxIDAgMjMuNzkwMzg1LDEyIDExLjc5MDM4NSwxMS43OTAzODUgMCAwIDAgMTIsMC4yMDk2MTUxNSBaIE0gOS4zMDAwMDE5LDkuOTgzODQ0MiAxMC44MjA5NjIsMTEuNTE2NTk0IFYgNC45MjU3NjkxIGggMi4zNTgwNzYgViAxMS41MTY1OTQgTCAxNC42OTk5OTgsOS45OTU2MzQ2IDE2LjM2MjQ0MiwxMS42NTgwNzkgMTIsMTYuMDIwNTIxIDcuNjI1NzY3MiwxMS42NTgwNzkgWiBNIDE2LjcxNjE1NCwxOS4wNzQyMzEgSCA3LjI4Mzg0NjEgdiAtMi4zNTgwNzcgaCA5LjQzMjMwNzkgeiIKICAgICAvPgo8L3N2Zz4K
-[downloads-link]: https://github.com/NatroTeam/NatroMacro/releases
-[roblox-shield]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgroups.roblox.com%2Fv1%2Fgroups%2F16490149&query=%24.memberCount&suffix=%20members&logo=roblox&logoColor=white&label=roblox&labelColor=black&color=dc3544
-[roblox-link]: https://www.roblox.com/groups/16490149/Natro-Macro
-[discord-shield]: https://img.shields.io/discord/1012610056921038868?logo=discord&logoColor=white&label=discord&labelColor=black&color=5865f2
-[discord-link]: https://discord.gg/natromacro
-[contributing-link]: https://github.com/NatroTeam/.github/blob/main/CONTRIBUTING.md
-[credits-link]: https://github.com/NatroTeam/.github/blob/main/CREDITS.md
-[bug-report-link]: https://github.com/NatroTeam/NatroMacro/issues/new?assignees=&labels=bug%2Cneeds+triage&projects=&template=bug.yml
-[suggestion-link]: https://github.com/NatroTeam/NatroMacro/issues/new?assignees=&labels=suggestion%2Cneeds+triage&projects=&template=suggestion.yml
-[github-profile-link]: http://github.com/NatroTeam
-[discord-banner-link]: https://invidget.switchblade.xyz/natromacro
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**Macro won't start**
+- Check Roblox is running
+- Verify BSS is loaded
+- Check Python dependencies
+- Review error logs
+
+**Image recognition issues**
+- Ensure correct screen resolution
+- Check game graphics settings
+- Verify template images exist
+- Adjust confidence thresholds
+
+**Performance problems**
+- Close unnecessary programs
+- Check system resources
+- Reduce randomization settings
+- Lower image quality settings
+
+**Safety triggers activating**
+- Check mouse position
+- Review system resources
+- Verify no debugging tools
+- Check break schedules
+
+### Getting Help
+1. Check the troubleshooting section
+2. Review log files for errors
+3. Verify configuration settings
+4. Test with minimal settings
+
+## 📁 File Structure
+
+```
+BSS_Pro_Macro/
+├── bss_pro_macro.py          # Main application
+├── main_controller.py        # Core macro controller
+├── core_systems.py          # Core automation systems
+├── field_system.py          # Field navigation & farming
+├── quest_system.py          # Quest management
+├── mob_system.py            # Mob hunting system
+├── planter_system.py        # Planter management
+├── boost_system.py          # Boost optimization
+├── gui_interface.py         # GUI interface
+├── advanced_safety.py       # Safety features
+├── config.json              # Configuration file
+├── requirements.txt         # Python dependencies
+├── README.md               # This file
+├── templates/              # Image templates
+├── logs/                   # Log files
+└── screenshots/            # Debug screenshots
+```
+
+## 🔄 Updates & Maintenance
+
+### Version History
+- **v1.0.0**: Initial release with full feature set
+
+### Future Updates
+- Enhanced image recognition
+- Additional quest NPCs
+- Mobile device support
+- Cloud configuration sync
+- Advanced statistics
+
+### Maintenance
+- Regular dependency updates
+- Template image updates
+- Configuration optimizations
+- Performance improvements
+
+## 🤝 Contributing
+
+This project is open for improvements and contributions:
+- Bug reports and fixes
+- Feature suggestions
+- Code optimizations
+- Documentation improvements
+
+## 📞 Support
+
+For support and questions:
+- Check the troubleshooting section
+- Review configuration guides
+- Examine log files for errors
+- Test with minimal settings
+
+## ⚠️ Disclaimer
+
+This macro is provided "as-is" without warranty. Users assume all risks associated with automation tools. Always follow game terms of service and use responsibly. The developers are not responsible for any account actions or consequences.
+
+---
+
+**BSS Pro Macro v1.0.0** - Advanced Bee Swarm Simulator Automation
+*Created with advanced AI assistance for educational purposes*

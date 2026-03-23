@@ -1,0 +1,77 @@
+{
+    "general": {
+        "macro_name": "BSS Pro Macro",
+        "version": "1.0.0",
+        "debug_mode": false,
+        "safety_enabled": true,
+        "randomization_enabled": true
+    },
+    "farming": {
+        "enabled": true,
+        "preferred_fields": ["Sunflower", "Dandelion", "Mushroom", "Blue Flower", "Clover"],
+        "field_rotation_enabled": true,
+        "collect_time_min": 45,
+        "collect_time_max": 90,
+        "hive_return_threshold": 95
+    },
+    "quests": {
+        "enabled": true,
+        "black_bear_enabled": true,
+        "brown_bear_enabled": true,
+        "polar_bear_enabled": true,
+        "panda_bear_enabled": true,
+        "science_bear_enabled": true,
+        "mother_bear_enabled": true,
+        "auto_accept_quests": true
+    },
+    "mobs": {
+        "enabled": true,
+        "kill_ladybugs": true,
+        "kill_rhinobeetles": true,
+        "kill_spiders": true,
+        "kill_mantis": true,
+        "kill_scorpions": true,
+        "kill_werewolves": true,
+        "mob_detection_timeout": 30
+    },
+    "planters": {
+        "enabled": true,
+        "auto_plant": true,
+        "auto_harvest": true,
+        "planter_fields": ["Sunflower", "Dandelion", "Mushroom", "Blue Flower"],
+        "planter_rotation": true
+    },
+    "boosts": {
+        "enabled": true,
+        "auto_use_field_dice": true,
+        "auto_use_enzymes": true,
+        "auto_use_glue": true,
+        "boost_threshold": 50
+    },
+    "hive": {
+        "auto_feed_bees": true,
+        "auto_hatch_eggs": true,
+        "feed_threshold": 80,
+        "hatch_threshold": 90
+    },
+    "dispensers": {
+        "enabled": true,
+        "collect_all": true,
+        "collection_interval": 300
+    },
+    "safety": {
+        "movement_randomization": 0.3,
+        "click_randomization": 0.2,
+        "pause_randomization": 0.5,
+        "break_interval_min": 1800,
+        "break_interval_max": 3600,
+        "break_duration_min": 120,
+        "break_duration_max": 300
+    },
+    "hotkeys": {
+        "start_stop": "F1",
+        "pause_resume": "F2",
+        "emergency_stop": "F3",
+        "show_hide_gui": "F4"
+    }
+}
